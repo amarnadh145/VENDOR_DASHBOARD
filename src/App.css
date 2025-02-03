@@ -21,7 +21,7 @@ body {
 .sidebarsection {
     width: 100%;
     max-width: 15%;
-    height: 87vh;
+    height: calc(100vh - 80px);
     padding-top: 10px;
     background-color: rgb(42, 71, 165);
 }
