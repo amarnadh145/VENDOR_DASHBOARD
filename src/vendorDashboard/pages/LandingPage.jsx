@@ -9,6 +9,12 @@ import AllProducts from '../components/AllProducts'
 
 const LandingPage = () => {
     const [showLogin, setShowLogin] = useState(false)
+    const [showRegister, setShowRegister] = useState(false)
+    const [showFirm, setShowFirm] = useState(false)
+    const [showProduct, setShowProduct] = useState(false)
+    const [showAllProducts, setShowAllProducts] = useState(false)
+    const [showLogOut, setShowLogOut] = useState(false)
+    const [showFirmTitle, setShowFirmTitle] = useState(true)
     const showLoginHandler = () => {
         setShowLogin(true)
         setShowRegister(false)
@@ -16,7 +22,6 @@ const LandingPage = () => {
         setShowProduct(false)
         setShowAllProducts(false)
     }
-    const [showRegister, setShowRegister] = useState(false)
     const showRegisterHandler = () => {
         setShowRegister(true)
         setShowLogin(false)
@@ -24,7 +29,6 @@ const LandingPage = () => {
         setShowProduct(false)
         setShowAllProducts(false)
     }
-    const [showFirm, setShowFirm] = useState(false)
     const showFirmHandler = () => {
         if (showLogOut) {
             setShowRegister(false)
@@ -38,8 +42,6 @@ const LandingPage = () => {
             setShowLogin(true)
         }
     }
-
-    const [showProduct, setShowProduct] = useState(false)
     const showProductHandler = () => {
         if (showLogOut) {
             setShowRegister(false)
@@ -54,7 +56,6 @@ const LandingPage = () => {
             setShowRegister(false);
         }
     }
-    const [showAllProducts, setShowAllProducts] = useState(false)
     const showAllProductsHandler = () => {
         if (showLogOut) {
             setShowRegister(false)
@@ -70,8 +71,6 @@ const LandingPage = () => {
         }
 
     }
-    const [showLogOut, setShowLogOut] = useState(false)
-    const [showFirmTitle, setShowFirmTitle] = useState(false)
     useEffect(() => {
         const loginToken = localStorage.getItem('loginToken')
         if (loginToken) {
