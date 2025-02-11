@@ -20,7 +20,6 @@ const Login = () => {
                 setEmail("")
                 setPassword("")
                 localStorage.setItem('loginToken', data.token)
-                window.location.reload()
             }
             const vendorId = data.vendorId
             console.log("checking", vendorId)
@@ -32,8 +31,8 @@ const Login = () => {
                 console.log(vendorFirmId)
                 localStorage.setItem('firmId', vendorFirmId)
                 localStorage.setItem('firmName', vendorFirmName)
-                window.location.reload()
             }
+             window.location.reload()
         }
         catch (error) {
             alert(error, "login failed")
