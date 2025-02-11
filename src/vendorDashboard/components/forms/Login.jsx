@@ -20,6 +20,7 @@ const Login = () => {
                 setEmail("")
                 setPassword("")
                 localStorage.setItem('loginToken', data.token)
+                window.location.reload()
             }
             const vendorId = data.vendorId
             console.log("checking", vendorId)
