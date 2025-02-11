@@ -32,7 +32,6 @@ const Login = () => {
                 localStorage.setItem('firmId', vendorFirmId)
                 localStorage.setItem('firmName', vendorFirmName)
             }
-             window.location.reload()
         }
         catch (error) {
             alert(error, "login failed")
